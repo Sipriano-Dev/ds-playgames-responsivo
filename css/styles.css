@@ -15,10 +15,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-a,
-a:hover {
   color: unset;
   text-decoration: none;
 }
@@ -56,6 +52,8 @@ nav {
   font-size: 14px;
   font-weight: 500;
   color: var(--white-color);
+  /* Impede de quebrar linha */
+  white-space: nowrap;
 }
 
 .menu ul {
@@ -72,7 +70,8 @@ nav {
 .title {
   font-size: 18px;
   color: var(--white-color);
-  padding: 15px 0;
+  display: flex;
+  align-items: center;
 }
 
 #news {
@@ -82,7 +81,7 @@ nav {
   padding-top: 90px;
 }
 #news h1 {
-  font-size: 24px;
+  font-size: 18px;
   color: var(--title-news-color);
   padding: 40px 0 10px 0;
   text-align: center;
@@ -90,9 +89,9 @@ nav {
 
 .news-card {
   background-color: var(--news-card-color);
-  margin: 30px 10px;
+  margin: 0 10px 30px 10px;
   border-radius: 8px;
-  padding: 15px 12px;
+  padding: 10px;
 }
 
 .news-card h2 {
@@ -137,17 +136,20 @@ nav {
 
 #games {
   background-color: var(--news-card-color);
+  padding-top: 40px;
 }
 
 #games h1 {
   font-size: 24px;
   color: var(--bg-header-color);
-  padding-top: 40px;
   text-align: center;
 }
 
 .games-container {
   padding: 0 10px 40px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .games-card {
@@ -189,19 +191,22 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
+  padding: 0 5px;
 }
 
 #form h1 {
   font-size: 24px;
   color: var(--title-news-color);
-  padding: 40px 0 10px 0;
+  padding-bottom: 15px;
   text-align: center;
 }
 
 .form-card {
+  width: 100%;
+  max-width: 790px;
   background-color: var(--news-card-color);
-  padding: 40px 10px;
-  margin: 0 10px;
+  padding: 40px 0;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -272,7 +277,7 @@ nav {
   color: var(--title-news-color);
 }
 
-.send-button-container {
+.form-button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,10 +339,53 @@ footer {
   .menu {
     display: none;
   }
+}
 
-  nav {
-    width: 100%;
-    max-width: 990px;
-    margin: 0 auto;
+@media (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  #news h1 {
+    font-size: 24px;
+    padding: 40px 0 40px 0;
+  }
+
+  .news-card {
+    padding: 15px 40px;
+  }
+
+  .news-card h2 {
+    font-size: 24px;
+  }
+
+  .news-card h3 {
+    font-size: 16px;
+  }
+
+  #games h1 {
+    font-size: 36px;
+  }
+
+  #form h1 {
+    font-size: 36px;
+    padding-bottom: 40px;
+  }
+
+  #ctrl-name,
+  #ctrl-email {
+    width: 642px;
+    padding-left: 75px;
+  }
+
+  .form-button-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    height: 190px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 75px;
   }
 }
