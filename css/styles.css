@@ -6,6 +6,7 @@
   --title-news-color: #797979;
   --news-card-color: #f0f0f0;
   --ler-mais-color: #dd7e92;
+  --name-color: #c4c4c4;
 }
 
 * {
@@ -154,4 +155,79 @@ nav {
   font-size: 36px;
   color: var(--bg-header-color);
   font-weight: bold;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form h1 {
+  font-size: 24px;
+  color: var(--title-news-color);
+  padding: 40px 0 10px 0;
+  text-align: center;
+}
+
+.form-card {
+  background-color: var(--news-card-color);
+  padding: 40px 10px;
+  margin: 0 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.name-email-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#ctrl-name,
+#ctrl-email {
+  width: 280px;
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.platform-question {
+  padding-bottom: 10px;
+  color: var(--title-news-color);
+}
+
+#ctrl-platform input {
+  width: 20px;
+  height: 20px;
+}
+
+.platform-choice {
+  display: flex;
+}
+
+.platform-choice label {
+  padding-left: 5px;
+  color: var(--title-news-color);
+}
+
+#ctrl-novidades {
+  margin: 30px 0;
+  width: 20px;
+  height: 20px;
+}
+
+.news-container {
+  display: flex;
+  align-items: center;
+}
+
+.news-container label {
+  padding-left: 5px;
+  color: var(--title-news-color);
 }
