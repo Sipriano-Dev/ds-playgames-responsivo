@@ -195,6 +195,18 @@ nav {
   padding-left: 20px;
   border-radius: 8px;
   margin: 10px 0;
+  border: solid 2px;
+  border-color: var(--ler-mais-color);
+}
+
+#ctrl-name::placeholder {
+  color: var(--name-color);
+  font-size: 16px;
+}
+
+#ctrl-email::placeholder {
+  color: var(--name-color);
+  font-size: 16px;
 }
 
 .platform-question {
@@ -230,4 +242,38 @@ nav {
 .news-container label {
   padding-left: 5px;
   color: var(--title-news-color);
+}
+
+.send-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.send-button input {
+  width: 244px;
+  height: 67px;
+  background-color: var(--ler-mais-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.clean-button input {
+  width: 244px;
+  height: 67px;
+  background-color: var(--white-color);
+  color: var(--ler-mais-color);
+  border: solid 2px;
+  border-color: var(--ler-mais-color);
+  border-top-color: ;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
 }
